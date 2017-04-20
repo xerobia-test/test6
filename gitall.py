@@ -9,7 +9,7 @@ from subprocess import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument("Version_Notes", help="the message/notes for this release",
-                    nargs="+", default = "Automated Message")
+                    nargs="*", default = "Automated Message")
 
 args = parser.parse_args()
 
@@ -17,7 +17,7 @@ print args.Version_Notes
 
 try:
     check_output('git commit -a -m "{}"'.format(args.Version_Notes), shell = True, stderr=STDOUT)
-    print "Local Commit Finished with message: " + args.Version_Notes
+    print "Local Commit Finished with message: " + " ".join(args.Version_Notes)
     print "Begining Push to server"
     check_output('git push', shell = True, stderr=STDOUT)
     print "Finished Push"
