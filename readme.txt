@@ -7,7 +7,7 @@ then this one: git push (pushes it into github/gitlab)
 ok, so it seems that each online repo must only match one offline one.
 also, time to make an CLI init and CLI gitall things to save time
 also each folder defaults to no remote. add it via this cmd: git remote add origin https://github.com/xerobia-test/test3.git
-dddfddddddd
+dddfddddddddd
 ff
 
 time to try gitlab now :) !
