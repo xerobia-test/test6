@@ -17,7 +17,7 @@ parser.add_argument("Version_Notes", help="the message/notes for this release",
 
 args = parser.parse_args()
 
-print args.Version_Notes
+#print args.Version_Notes
 
 try:
     check_output('git commit -a -m "{}"'.format(args.Version_Notes), shell = True, stderr=STDOUT)
